@@ -1,0 +1,32 @@
+:root {
+  --blue: #293b98; --blue-soft: #eef3ff; --cyan: #32b4d5;
+  --text: #454b5a; --muted: #737b8b; --page: #f4f8f8;
+  --white: #fff; --border: #dfe5ef;
+  --shadow: 0 12px 34px rgba(27,79,93,.09);
+}
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; font-family: Arial,Helvetica,sans-serif; color: var(--text); background: var(--page); }
+.site-header { background: var(--white); border-bottom: 1px solid #e8edf2; }
+.header-inner { width: min(100% - 36px,1080px); min-height: 88px; margin: 0 auto; display: flex; align-items: center; gap: 16px; }
+.logo { width: 180px; height: 80px; object-fit: contain; }
+.brand-text { display: grid; gap: 5px; color: var(--blue); }
+.brand-text span { font-size: 11px; letter-spacing: 1px; font-weight: 700; }
+.brand-text strong { font-size: 18px; }
+.page { width: min(100% - 32px,620px); margin: 54px auto 28px; }
+.card { background: var(--white); padding: 38px; border-radius: 16px; box-shadow: var(--shadow); }
+.eyebrow { color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 12px; }
+h1 { color: var(--blue); font-size: clamp(25px,4vw,32px); line-height: 1.2; margin: 0 0 14px; }
+.intro { color: var(--muted); line-height: 1.65; margin: 0 0 30px; }
+.field { margin-bottom: 22px; }
+label { display: block; color: var(--blue); font-weight: 700; margin-bottom: 9px; }
+input { display: block; width: 100%; min-height: 49px; border: 1px solid var(--border); border-radius: 8px; padding: 12px 14px; font-size: 15px; color: var(--text); background: #fff; outline: none; }
+input:focus { border-color: var(--cyan); box-shadow: 0 0 0 3px rgba(50,180,213,.14); }
+.hint { margin: 8px 0 0; font-size: 12px; color: var(--muted); line-height: 1.5; }
+button { width: 100%; min-height: 50px; border: 0; border-radius: 8px; background: var(--blue); color: #fff; font-size: 15px; font-weight: 700; cursor: pointer; }
+button:hover { background: #1f2f7e; }
+button:disabled { opacity: .65; cursor: wait; }
+.message { min-height: 22px; margin: 14px 0 0; font-size: 13px; line-height: 1.5; }
+.privacy-note { margin-top: 28px; padding: 16px; background: var(--blue-soft); border-radius: 9px; color: var(--blue); font-size: 13px; line-height: 1.55; }
+.privacy-note p { margin: 5px 0 0; }
+footer { text-align: center; color: var(--muted); font-size: 12px; margin-top: 25px; }
+@media (max-width:520px) { .page { margin-top: 28px; } .card { padding: 26px 20px; } .header-inner { min-height: 76px; } .logo { width: 52px; height: 52px; } }

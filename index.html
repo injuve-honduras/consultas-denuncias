@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Consulta el estado de una denuncia presentada ante INJUVE.">
+  <title>Consulta de denuncias | INJUVE</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <img class="logo" src="assets/img/LOGO injuve superior.png" alt="Logotipo INJUVE">
+      <div class="brand-text">
+        <strong>Consulta de denuncias</strong>
+      </div>
+    </div>
+  </header>
+  <main class="page">
+    <section class="card" aria-labelledby="page-title">
+      <div class="eyebrow">SERVICIO INSTITUCIONAL</div>
+      <h1 id="page-title">Consulta el estado de tu denuncia</h1>
+      <p class="intro">Introduce tu código de seguimiento y tu clave privada para consultar el estado de recepción de tu denuncia.</p>
+      <form id="consultaForm" novalidate>
+        <div class="field">
+          <label for="codigo">Código de seguimiento</label>
+          <input id="codigo" name="codigo" type="text" placeholder="INJ-2026-XXXXXXXX" autocomplete="off" maxlength="30" required>
+        </div>
+        <div class="field">
+          <label for="clave">Clave privada de consulta</label>
+          <input id="clave" name="clave" type="password" placeholder="Introduce tu clave privada" autocomplete="off" maxlength="100" required>
+          <p class="hint">La clave privada es la que recibiste al presentar la denuncia.</p>
+        </div>
+        <button id="consultarBtn" type="submit">Consultar estado</button>
+        <p id="mensaje" class="message" role="status" aria-live="polite"></p>
+      </form>
+      <div class="privacy-note">
+        <strong>Protección de la información</strong>
+        <p>La consulta requiere ambas credenciales. No compartas tu clave privada.</p>
+      </div>
+    </section>
+    <footer>Instituto Nacional de la Juventud – INJUVE</footer>
+  </main>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
